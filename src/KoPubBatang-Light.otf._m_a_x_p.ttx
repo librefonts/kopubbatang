@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ttFont ttLibVersion="2.4">
+
+  <maxp ERROR="decompilation error">
+    <!-- An error occurred during the decompilation of this table -->
+    <!-- Traceback (most recent call last):
+           File "/Volumes/Fonts/all/venv/lib/python2.7/site-packages/FontTools/fontTools/ttLib/__init__.py", line 372, in __getitem__
+             table.decompile(data, self)
+           File "/Volumes/Fonts/all/venv/lib/python2.7/site-packages/FontTools/fontTools/ttLib/tables/_m_a_x_p.py", line 38, in decompile
+             assert len(data) == 0
+         AssertionError
+          -->
+    <hexdata>
+      00005000 47640000 be160c54 00078800
+      d580034b 78706d61 be140c54 00078800
+    </hexdata>
+  </maxp>
+
+</ttFont>

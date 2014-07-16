@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ttFont sfntVersion="OTTO" ttLibVersion="2.4">
+  <GlyphOrder src="KoPubBatang-Bold.otf.GlyphOrder.ttx"/>
+  <head src="KoPubBatang-Bold.otf._h_e_a_d.ttx"/>
+  <hhea src="KoPubBatang-Bold.otf._h_h_e_a.ttx"/>
+  <maxp src="KoPubBatang-Bold.otf._m_a_x_p.ttx"/>
+  <OS_2 src="KoPubBatang-Bold.otf.O_S_2f_2.ttx"/>
+  <name src="KoPubBatang-Bold.otf._n_a_m_e.ttx"/>
+  <cmap src="KoPubBatang-Bold.otf._c_m_a_p.ttx"/>
+  <post src="KoPubBatang-Bold.otf._p_o_s_t.ttx"/>
+  <CFF src="KoPubBatang-Bold.otf.C_F_F_.ttx"/>
+  <FFTM src="KoPubBatang-Bold.otf.F_F_T_M_.ttx"/>
+  <GDEF src="KoPubBatang-Bold.otf.G_D_E_F_.ttx"/>
+  <GPOS src="KoPubBatang-Bold.otf.G_P_O_S_.ttx"/>
+  <GSUB src="KoPubBatang-Bold.otf.G_S_U_B_.ttx"/>
+  <gasp src="KoPubBatang-Bold.otf._g_a_s_p.ttx"/>
+  <hmtx src="KoPubBatang-Bold.otf._h_m_t_x.ttx"/>
+</ttFont>
