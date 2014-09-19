@@ -1,0 +1,658 @@
+# Bake Begins!
+### (1 of 6) Copy sources
+$ cp -a /home/travis/build/fontdirectory/kopubbatang/DESCRIPTION.en_us.html /home/travis/build/fontdirectory/kopubbatang/builds/build
+$ cp -a src/KoPubBatang-Light.otf.ttx src/KoPubBatang-Bold.otf.ttx src/KoPubBatang-Regular.otf.ttx src/KoPubBatang-Light.otf._h_h_e_a.ttx src/KoPubBatang-Light.otf.F_F_T_M_.ttx src/KoPubBatang-Light.otf._p_o_s_t.ttx src/KoPubBatang-Light.otf._g_a_s_p.ttx src/KoPubBatang-Light.otf.G_D_E_F_.ttx src/KoPubBatang-Light.otf._m_a_x_p.ttx src/KoPubBatang-Light.otf.C_F_F_.ttx src/KoPubBatang-Light.otf.O_S_2f_2.ttx src/KoPubBatang-Light.otf._c_m_a_p.ttx src/KoPubBatang-Light.otf.G_S_U_B_.ttx src/KoPubBatang-Light.otf._h_e_a_d.ttx src/KoPubBatang-Light.otf._h_m_t_x.ttx src/KoPubBatang-Light.otf.G_P_O_S_.ttx src/KoPubBatang-Light.otf._n_a_m_e.ttx src/KoPubBatang-Light.otf.GlyphOrder.ttx src/KoPubBatang-Bold.otf.G_D_E_F_.ttx src/KoPubBatang-Bold.otf._h_e_a_d.ttx src/KoPubBatang-Bold.otf.F_F_T_M_.ttx src/KoPubBatang-Bold.otf._h_m_t_x.ttx src/KoPubBatang-Bold.otf._h_h_e_a.ttx src/KoPubBatang-Bold.otf.C_F_F_.ttx src/KoPubBatang-Bold.otf._p_o_s_t.ttx src/KoPubBatang-Bold.otf.G_P_O_S_.ttx src/KoPubBatang-Bold.otf._c_m_a_p.ttx src/KoPubBatang-Bold.otf._m_a_x_p.ttx src/KoPubBatang-Bold.otf._g_a_s_p.ttx src/KoPubBatang-Bold.otf.GlyphOrder.ttx src/KoPubBatang-Bold.otf.O_S_2f_2.ttx src/KoPubBatang-Bold.otf._n_a_m_e.ttx src/KoPubBatang-Bold.otf.G_S_U_B_.ttx src/KoPubBatang-Regular.otf._m_a_x_p.ttx src/KoPubBatang-Regular.otf.G_D_E_F_.ttx src/KoPubBatang-Regular.otf.G_P_O_S_.ttx src/KoPubBatang-Regular.otf.F_F_T_M_.ttx src/KoPubBatang-Regular.otf._c_m_a_p.ttx src/KoPubBatang-Regular.otf.GlyphOrder.ttx src/KoPubBatang-Regular.otf.O_S_2f_2.ttx src/KoPubBatang-Regular.otf._g_a_s_p.ttx src/KoPubBatang-Regular.otf._h_e_a_d.ttx src/KoPubBatang-Regular.otf._h_m_t_x.ttx src/KoPubBatang-Regular.otf._n_a_m_e.ttx src/KoPubBatang-Regular.otf._p_o_s_t.ttx src/KoPubBatang-Regular.otf.G_S_U_B_.ttx src/KoPubBatang-Regular.otf._h_h_e_a.ttx src/KoPubBatang-Regular.otf.C_F_F_.ttx /home/travis/build/fontdirectory/kopubbatang/builds/build/sources
+### (2 of 6) pyfontaine
+### (3 of 6) Run upstream tests
+$ bakery-lint.py upstream-repo sources
+$ fontaine --collections subsets --text /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang-Light.otf.ttx /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang-Bold.otf.ttx /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang-Regular.otf.ttx > fontaine.txt
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_component(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_mark_to_mark(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_own_glyphs(): OK
+pyfontaine error: 'DefaultTable' object has no attribute 'numGlyphs'
+pyfontaine process has been failed
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_contours(): OK
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_points(): OK
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_test_prepolation_glyph_names(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_bakery_yaml_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_copyright_notices_same_across_family(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_description_html_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_fontlog_txt_exists(): FAIL
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_metadata_json_exists(): FAIL
+$ bakery-lint.py upstream-ttx KoPubBatang-Light.otf.ttx
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang-Light.otf.ttx /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang_Pro-Light.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+$ bakery-lint.py upstream-ttx KoPubBatang-Bold.otf.ttx
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang-Bold.otf.ttx /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang_Pro-Bold.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+$ bakery-lint.py upstream-ttx KoPubBatang-Regular.otf.ttx
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang-Regular.otf.ttx /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang_Pro-Medium.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+### (4 of 6) Convert sources to TTF
+$ ttx -d /home/travis/build/fontdirectory/kopubbatang/builds/build /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang_Pro-Bold.ttx /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang_Pro-Medium.ttx /home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang_Pro-Light.ttx
+$ font2ttf.py sources/KoPubBatang_Pro-Bold.otf KoPubBatang_Pro-Bold.ttf
+Warning: Mac string is a subset of the Windows string in the 'name' table
+ for the Family string in the English (US) language.
+Warning: Mac and Windows entries in the 'name' table differ for the
+ SubFamily string in the language English (US)
+ Mac String: Bold
+Windows String: Regular
+Warning: Mac string is a subset of the Windows string in the 'name' table
+ for the Family string in the Korean language.
+Warning: Mac and Windows entries in the 'name' table differ for the
+ SubFamily string in the language Korean
+ Mac String: Bold
+Windows String: Regular
+Success: Generated OpenType-TTF (/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf)
+Compiling "/home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang_Pro-Bold.ttx" to "/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.otf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'name' table...
+Parsing 'cmap' table...
+Parsing 'post' table...
+Parsing 'CFF ' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Parsing 'gasp' table...
+Parsing 'hmtx' table...
+Compiling "/home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang_Pro-Medium.ttx" to "/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.otf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'name' table...
+Parsing 'cmap' table...
+Parsing 'post' table...
+Parsing 'CFF ' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Parsing 'gasp' table...
+Parsing 'hmtx' table...
+Compiling "/home/travis/build/fontdirectory/kopubbatang/builds/build/sources/KoPubBatang_Pro-Light.ttx" to "/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'name' table...
+Parsing 'cmap' table...
+Parsing 'post' table...
+Parsing 'CFF ' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Parsing 'gasp' table...
+Parsing 'hmtx' table...
+strippedname:/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.otf
+$ font2ttf.py sources/KoPubBatang_Pro-Medium.otf KoPubBatang_Pro-Medium.ttf
+Warning: Mac string is a subset of the Windows string in the 'name' table
+ for the Family string in the English (US) language.
+Warning: Mac and Windows entries in the 'name' table differ for the
+ SubFamily string in the language English (US)
+ Mac String: Medium
+Windows String: Regular
+Warning: Mac string is a subset of the Windows string in the 'name' table
+ for the Family string in the Korean language.
+Warning: Mac and Windows entries in the 'name' table differ for the
+ SubFamily string in the language Korean
+ Mac String: Medium
+Windows String: Regular
+### Test KoPubBatang_Pro-Bold.ttf
+$ bakery-lint.py result KoPubBatang_Pro-Bold.ttf
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): FAIL
+$ bakery-opentype-fix.py /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ bakery-fstype-fix.py --autofix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_file_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): FAIL
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ bakery-nbsp-fix.py /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): ERROR
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): FAIL
+$ bakery-vmet-fix.py --autofix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.otf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.otf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.otf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf
+$ bakery-vmet-fix.py /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.otf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf
+Parameter              KoPubBatang_Pro-Medium.otf    KoPubBatang_Pro-Bold.ttf    KoPubBatang_Pro-Light.otf    
+ymax                   814                           819                         821                          
+hhea.ascent            821                           821                         821                          
+OS/2.sTypoAscender     821                           821                         821                          
+OS/2.usWinAscent       821                           821                         821                          
+ymin                   -271                          -272                        -273                         
+hhea.descent           -273                          -273                        -273                         
+OS/2.sTypoDescender    -273                          -273                        -273                         
+OS/2.usWinDescent      273                           273                         273                          
+hhea.lineGap           0                             0                           0                            
+OS/2.sTypoLineGap      0                             0                           0                            
+hhea total             1094                          1094                        1094                         
+typo total             1094                          1094                        1094                         
+win total              1094                          1094                        1094                         
+UPM:Heights            1000:1085                     1000:1091                   1000:1094                    
+UPM:Heights %          108 %                         109 %                       109 %                        
+
+
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+Success: Generated OpenType-TTF (/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf)
+strippedname:/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.otf
+$ font2ttf.py sources/KoPubBatang_Pro-Light.otf KoPubBatang_Pro-Light.ttf
+Warning: Mac string is a subset of the Windows string in the 'name' table
+ for the Family string in the English (US) language.
+Warning: Mac and Windows entries in the 'name' table differ for the
+ SubFamily string in the language English (US)
+ Mac String: Light
+Windows String: Regular
+Warning: Mac string is a subset of the Windows string in the 'name' table
+ for the Family string in the Korean language.
+Warning: Mac and Windows entries in the 'name' table differ for the
+ SubFamily string in the language Korean
+ Mac String: Light
+Windows String: Regular
+### Test KoPubBatang_Pro-Medium.ttf
+$ bakery-lint.py result KoPubBatang_Pro-Medium.ttf
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): FAIL
+$ bakery-opentype-fix.py /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ bakery-fstype-fix.py --autofix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_file_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): FAIL
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ bakery-nbsp-fix.py /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): ERROR
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ bakery-encode-glyphs-fix.py --autofix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): ERROR
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+The following table(s) in the font have been ignored by FontForge
+  Ignoring 'DSIG' digital signature table
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): FAIL
+$ bakery-vmet-fix.py --autofix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf
+$ bakery-vmet-fix.py /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+### Optimize TTF KoPubBatang_Pro-Bold.ttf
+$ ls -l 'KoPubBatang_Pro-Bold.ttf'* # look at the size savings of that subset process
+KoPubBatang_Pro-Bold.ttf.opt: 7574616 bytes
+KoPubBatang_Pro-Bold.ttf: 7863480 bytes
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.opt /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+### Autohint TTFs (ttfautohint) KoPubBatang_Pro-Bold.ttf
+$ ls -l /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf: 7574616 bytes
+/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.autohint.ttf: 7866092 bytes
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.autohint.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+### Subset TTFs (pyftsubset) KoPubBatang_Pro-Bold.ttf
+Process Process-7:
+Traceback (most recent call last):
+  File "/opt/python/2.7.8/lib/python2.7/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/opt/python/2.7.8/lib/python2.7/multiprocessing/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_cli/pipe/build.py", line 123, in run_processes
+    pyftsubset.run(filename, pipedata)
+  File "/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_cli/pipe/pyftsubset.py", line 82, in run
+    string = bin2unistring(D.get(16) or D.get(1))
+  File "/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_cli/pipe/pyftsubset.py", line 25, in bin2unistring
+    if b'\000' in string:
+TypeError: argument of type 'NoneType' is not iterable
+No nbsp glyph
+spaceWidth is    312
+nbspWidth is     0
+KoPubBatang_Pro-Bold.ttf.fix made with spaceWidth and nbspWidth of 312
+strippedname:/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+Parameter              KoPubBatang_Pro-Medium.ttf    KoPubBatang_Pro-Bold.ttf    KoPubBatang_Pro-Light.otf    
+ymax                   814                           819                         821                          
+hhea.ascent            821                           821                         821                          
+OS/2.sTypoAscender     821                           821                         821                          
+OS/2.usWinAscent       821                           821                         821                          
+ymin                   -271                          -272                        -273                         
+hhea.descent           -273                          -273                        -273                         
+OS/2.sTypoDescender    -273                          -273                        -273                         
+OS/2.usWinDescent      273                           273                         273                          
+hhea.lineGap           0                             0                           0                            
+OS/2.sTypoLineGap      0                             0                           0                            
+hhea total             1094                          1094                        1094                         
+typo total             1094                          1094                        1094                         
+win total              1094                          1094                        1094                         
+UPM:Heights            1000:1085                     1000:1091                   1000:1094                    
+UPM:Heights %          108 %                         109 %                       109 %                        
+
+
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ bakery-encode-glyphs-fix.py --autofix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+The following table(s) in the font have been ignored by FontForge
+  Ignoring 'DSIG' digital signature table
+Success: Generated OpenType-TTF (/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf)
+strippedname:/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.otf
+### Test KoPubBatang_Pro-Light.ttf
+$ bakery-lint.py result KoPubBatang_Pro-Light.ttf
+### (5 of 6) Generate METADATA.json (genmetadata.py)
+$ genmetadata.py /home/travis/build/fontdirectory/kopubbatang/builds/build
+{} exists
+FATAL: No *-Regular.ttf found to set family name!
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): FAIL
+$ bakery-opentype-fix.py /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ bakery-fstype-fix.py --autofix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_file_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): FAIL
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ bakery-nbsp-fix.py /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+WARNING: No *-Regular.ttf to calculate gzipped filesize!
+Family Name: UNKNOWN
+PS Name: KoPubBatangPLA
+Full Name:
+Style: normal
+Weight: 200
+Filename: KoPubBatang_Pro-Light.ttf
+Copyright:
+Family Name: UNKNOWN
+PS Name: KoPubBatangPMA
+Full Name:
+Style: normal
+Weight: 500
+Filename: KoPubBatang_Pro-Medium.ttf
+Copyright:
+Family Name: UNKNOWN
+PS Name: KoPubBatangPBA
+Full Name:
+Style: normal
+Weight: 700
+Filename: KoPubBatang_Pro-Bold.ttf
+Copyright:
+### (6 of 6) Run tests for METADATA.json
+$ bakery-lint.py metadata METADATA.json
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_latin(): FAIL
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_menu(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_more_than_500b(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_valid_html(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_daltonmaag_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontbureau_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontscom_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontshop_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontsmith_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_houseind_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_myfonts_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_veer_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_family_is_listed_in_gwf(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_atleast_latin_menu_subsets_exist(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_designer_exists_in_profiles_csv(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_items_dicts(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_no_dupes(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_has_unique_style_weight_pairs(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_license(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_no_unknown_top_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_subsets_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_top_keys_types(): FAIL
+bakery_lint.tests.downstream.test_check_canonical_filenames.CheckCanonicalFilenames.test_check_canonical_filenames(): FAIL
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckCanonicalWeights.test_check_canonical_weights(): OK
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckPostScriptNameMatchesWeight.test_postscriptname_contains_correct_weight(): FAIL
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFontWeightSameAsInMetadata.test_font_weight_same_as_in_metadata(): OK
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFullNameEqualCanonicalName.test_metadata_contains_current_font(): OK
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_contains_correct_rfn(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_is_consistent_across_family(): OK
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_matches_pattern(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_metadata_copyright_size(): OK
+bakery_lint.tests.downstream.test_check_canonical_styles.CheckCanonicalStyles.test_check_canonical_styles(): OK
+bakery_lint.tests.downstream.test_check_menu_contains_proper_glyphs.CheckMenuSubsetContainsProperGlyphs.test_check_menu_contains_proper_glyphs(): ERROR
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_copyrighttxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_description_exists(): OK
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_fontlogtxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_licensetxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_metadata_matches_nametable.CheckMetadataMatchesNameTable.test_check_metadata_matches_nametable(): FAIL
+bakery_lint.tests.downstream.test_check_files_menu_agreements.CheckFontsMenuAgreements.test_menu_file_agreement(): FAIL
+bakery_lint.tests.downstream.test_check_metadata_fields.CheckMetadataFields.test_check_metadata_fields(): OK
+bakery_lint.tests.downstream.test_check_subsets_exists.CheckSubsetsExist.test_check_subsets_exists(): FAIL
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckItalicStyleMatchesMacStyle.test_check_italic_style_matches_names(): OK
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckNormalStyleMatchesMacStyle.test_check_normal_style_matches_names(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_font_name_matches_family(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_family(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_family_values_are_all_the_same(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_filename_matches_postScriptName(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_font_have_regular(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fonts_fields_have_fontname(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_is_equal_to_internal_font_fullname(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_matches_postScriptName(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_postScriptName_matches_ttf_fontname(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_400(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_normal(): FAIL
+bakery_lint.tests.downstream.test_check_font_name_not_in_camelcase.CheckFontNameNotInCamelCase.test_fontname_not_in_camel_case(): OK
+bakery_lint.tests.downstream.test_check_monospace_agreements.CheckMonospaceAgreement.test_check_monospace_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_encodings_of_glyphs_across_family(): OK
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_names_of_glyphs_across_family(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_number_of_glyphs_across_family(): FAIL
+bakery_lint.tests.downstream.test_check_familyname_matches_fontnames.CheckFamilyNameMatchesFontNames.test_check_familyname_matches_fontnames(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+### Optimize TTF KoPubBatang_Pro-Medium.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): ERROR
+$ ls -l 'KoPubBatang_Pro-Medium.ttf'* # look at the size savings of that subset process
+KoPubBatang_Pro-Medium.ttf.opt: 7578256 bytes
+KoPubBatang_Pro-Medium.ttf: 7867372 bytes
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf.opt /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+### Autohint TTFs (ttfautohint) KoPubBatang_Pro-Medium.ttf
+$ ls -l /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf: 7578256 bytes
+/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.autohint.ttf: 7875936 bytes
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.autohint.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+### Subset TTFs (pyftsubset) KoPubBatang_Pro-Medium.ttf
+Process Process-8:
+Traceback (most recent call last):
+  File "/opt/python/2.7.8/lib/python2.7/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/opt/python/2.7.8/lib/python2.7/multiprocessing/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_cli/pipe/build.py", line 123, in run_processes
+    pyftsubset.run(filename, pipedata)
+  File "/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_cli/pipe/pyftsubset.py", line 82, in run
+    string = bin2unistring(D.get(16) or D.get(1))
+  File "/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_cli/pipe/pyftsubset.py", line 25, in bin2unistring
+    if b'\000' in string:
+TypeError: argument of type 'NoneType' is not iterable
+No nbsp glyph
+spaceWidth is    312
+nbspWidth is     0
+KoPubBatang_Pro-Medium.ttf.fix made with spaceWidth and nbspWidth of 312
+strippedname:/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): FAIL
+$ bakery-vmet-fix.py --autofix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+$ bakery-vmet-fix.py /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Medium.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Bold.ttf
+Parameter              KoPubBatang_Pro-Light.ttf    KoPubBatang_Pro-Medium.ttf    KoPubBatang_Pro-Bold.ttf    
+ymax                   821                          814                           819                         
+hhea.ascent            821                          821                           821                         
+OS/2.sTypoAscender     821                          821                           821                         
+OS/2.usWinAscent       821                          821                           821                         
+ymin                   -273                         -271                          -272                        
+hhea.descent           -273                         -273                          -273                        
+OS/2.sTypoDescender    -273                         -273                          -273                        
+OS/2.usWinDescent      273                          273                           273                         
+hhea.lineGap           0                            0                             0                           
+OS/2.sTypoLineGap      0                            0                             0                           
+hhea total             1094                         1094                          1094                        
+typo total             1094                         1094                          1094                        
+win total              1094                         1094                          1094                        
+UPM:Heights            1000:1094                    1000:1085                     1000:1091                   
+UPM:Heights %          109 %                        108 %                         109 %                       
+
+
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ bakery-encode-glyphs-fix.py --autofix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf.fix /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+The following table(s) in the font have been ignored by FontForge
+  Ignoring 'DSIG' digital signature table
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+### Optimize TTF KoPubBatang_Pro-Light.ttf
+$ ls -l 'KoPubBatang_Pro-Light.ttf'* # look at the size savings of that subset process
+KoPubBatang_Pro-Light.ttf.opt: 9474268 bytes
+KoPubBatang_Pro-Light.ttf: 9763408 bytes
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf.opt /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+### Autohint TTFs (ttfautohint) KoPubBatang_Pro-Light.ttf
+$ ls -l /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf: 9474268 bytes
+/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.autohint.ttf: 9812152 bytes
+$ mv /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.autohint.ttf /home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+### Subset TTFs (pyftsubset) KoPubBatang_Pro-Light.ttf
+Process Process-9:
+Traceback (most recent call last):
+  File "/opt/python/2.7.8/lib/python2.7/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/opt/python/2.7.8/lib/python2.7/multiprocessing/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_cli/pipe/build.py", line 123, in run_processes
+    pyftsubset.run(filename, pipedata)
+  File "/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_cli/pipe/pyftsubset.py", line 82, in run
+    string = bin2unistring(D.get(16) or D.get(1))
+  File "/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_cli/pipe/pyftsubset.py", line 25, in bin2unistring
+    if b'\000' in string:
+TypeError: argument of type 'NoneType' is not iterable
+No nbsp glyph
+spaceWidth is    312
+nbspWidth is     0
+KoPubBatang_Pro-Light.ttf.fix made with spaceWidth and nbspWidth of 312
+strippedname:/home/travis/build/fontdirectory/kopubbatang/builds/build/KoPubBatang_Pro-Light.ttf
+{
+  "name": "UNKNOWN", 
+  "designer": null, 
+  "license": "", 
+  "visibility": "Sandbox", 
+  "category": "monospace", 
+  "size": -1, 
+  "dateAdded": "2014-09-19", 
+  "fonts": [
+    {
+      "name": "UNKNOWN", 
+      "postScriptName": "KoPubBatangPLA", 
+      "fullName": "", 
+      "style": "normal", 
+      "weight": 200, 
+      "filename": "KoPubBatang_Pro-Light.ttf", 
+      "copyright": ""
+    }, 
+    {
+      "name": "UNKNOWN", 
+      "postScriptName": "KoPubBatangPMA", 
+      "fullName": "", 
+      "style": "normal", 
+      "weight": 500, 
+      "filename": "KoPubBatang_Pro-Medium.ttf", 
+      "copyright": ""
+    }, 
+    {
+      "name": "UNKNOWN", 
+      "postScriptName": "KoPubBatangPBA", 
+      "fullName": "", 
+      "style": "normal", 
+      "weight": 700, 
+      "filename": "KoPubBatang_Pro-Bold.ttf", 
+      "copyright": ""
+    }
+  ], 
+  "subsets": [
+    "latin"
+  ]
+}
